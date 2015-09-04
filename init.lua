@@ -1,5 +1,6 @@
 dofile(minetest.get_modpath("ugsbiomes").."/biome_layer.lua")
 dofile(minetest.get_modpath("ugsbiomes").."/nodes.lua")
+--dofile(minetest.get_modpath("ugsbiomes").."/infotools.lua")
 
 local c_air     = minetest.get_content_id("air")
 local c_ignore  = minetest.get_content_id("ignore")
@@ -48,13 +49,13 @@ minetest.register_on_generated(function(minp, maxp, seed)
 			for x = minp.x,maxp.x do
 				if data[vi] ~= c_stone then
 				--if y ~= 50 then
-				elseif biomemap[nixz] == "chalk" then
+				elseif biomemap[nixyz] == "chalk" then
 					data[vi] = chalk
-				elseif biomemap[nixz] == "slate" then
+				elseif biomemap[nixyz] == "slate" then
 					data[vi] = slate
-				elseif biomemap[nixz] == "marble" then
+				elseif biomemap[nixyz] == "marble" then
 					data[vi] = marble
-				elseif biomemap[nixz] == "stone" then
+				elseif biomemap[nixyz] == "stone" then
 				else
 					data[vi] = c_obsidian
 				end
