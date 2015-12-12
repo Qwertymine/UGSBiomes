@@ -1,11 +1,16 @@
 vcnlib.new_layer{
 	name = "ugsbiomes",
+	blocksize = {x=5,y=5,z=5},
 	seed_offset = 15,
 	dimensions = 3,
-	scale = 5,
-	sector_lengths = {
-	x=15,y=15,z=15,},
-	biome_types = "random",
+	point_distribution = {
+		default = 1,
+		20,1,
+	},
+	sector_lengths = {x=150,y=150,z=150,},
+	biome_types = {
+		"random",
+	},
 	geometry = "manhattan",
 }
 
